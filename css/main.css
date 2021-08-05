@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial|Raleway:300,400,500,600,700');
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-grey: #F4F4F4;
+    --grey: #dddddd;
+    --red: #fd3c3c;
+
+    --header-height: 80px;
+    --page-width: 80vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: var(--page-width);
+    height: var(--header-height);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 0;
+    margin: 0 auto;
+    
+}
+header a {
+    color: var(--black);   
+}
+header ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+header ul li {
+    padding: 10px;
+}
+header ul li a button {
+    padding: 10px 16px;
+
+    background-color: var(--black);
+    border: 1px solid var(--black);
+
+    font-size: 16px;
+    font-family:'Questrial', sans-serif;
+    color: var(--white);
+    cursor: pointer;
+}
+header ul li a button.button-minimal {
+    background-color: inherit;
+    color: var(--black);
+}
+header .header-title {
+    font-size: 30px;
+    font-weight: 600;
+    width: 100%;
+}
+
+body {
+    background-color: var(--light-grey);
+    font-family:'Questrial', sans-serif;
+}
+
+main {
+    width: var(--page-width);
+    padding: 20px 0px;
+    margin: 0 auto;
+}
+.hero {
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+p {
+    padding: 10px 0px;
+
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* HEADING */
+h1, h2 {
+    margin: 0;
+
+    font-family:'Questrial', sans-serif;
+    font-weight: 700;
+    color: var(--black);
+}
+h1 {
+    font-size: 60px;
+}
+.form-container h1 {
+    padding: 0px 0px 0px 0px;
+
+    font-size: 30px;
+}
+.h1-subtitle {
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+.form-container h2 {
+    padding: 0px 0px 10px 0px;
+
+    font-size: 20px;
+}
+h2 { 
+    font-size: 30px;
+}
+
+
+/* FORM */
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+    padding: 20px 40px 100px 40px;
+
+    background-color: var(--white);
+}
+.form-item {
+    margin: 10px 0px;
+    display: flex;
+}
+.form-link {
+    margin: 10px 0px;
+    text-align: center;
+}
+.form-link a {
+    color: var(--black);
+}
+
+.errors {
+    margin: 10px 0px 0px 0px;
+    min-height: 14px;
+    font-size: 14px;
+    color: var(--red);
+}
+
+/* inputs */
+.form-item input[type="text"], .form-item input[type="email"], .form-item input[type="password"] {
+    display: block;
+    width: 100%;
+
+    border: 1px solid var(--grey);
+    border-radius: 2px;
+
+    padding: 10px 10px;
+
+    font-family:'Questrial', sans-serif;
+    font-size: 16px;
+
+    outline-color: var(--black);
+
+}
+.form-item input[type="text"]:nth-child(n), .form-item input[type="email"]:nth-child(n), .form-item input[type="password"]:nth-child(n) {
+    margin: 0px 5px;
+}
+.form-item input[type="text"]:first-child, .form-item input[type="email"]:first-child, .form-item input[type="password"]:first-child {
+    margin-left: 0;
+}
+.form-item input[type="text"]:last-child, .form-item input[type="email"]:last-child, .form-item input[type="password"]:last-child {
+    margin-right: 0;
+}
+.form-item input[type="text"].error, .form-item input[type="email"].error, .form-item input[type="password"].error {
+    border: 1px solid var(--red);
+}
+
+/* button */
+.form-item button {
+    display: block;
+    width: 100%;
+
+    padding: 10px;
+
+    background-color: var(--black);
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-family:'Questrial', sans-serif;
+    font-weight: 700;
+    color: var(--white);
+}
+
+@media only screen and (min-width: 800px) {
+    .form-container {
+        float: left;
+        width: 500px;
+    }
+    header {
+        flex-wrap: nowrap;
+    }
+}
